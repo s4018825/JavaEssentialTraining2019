@@ -18,7 +18,7 @@ public class Main {
         String climberGrade = "V4+";
         String gymName = "Rocket Climbing Gym";
         String gymSuburb = "Footscray";
-        var gymPostCode = 3011;
+        int gymPostCode = 3011;
         String stateCode = "VIC";
 
         var climbingString = String.format(template2, climberName,
