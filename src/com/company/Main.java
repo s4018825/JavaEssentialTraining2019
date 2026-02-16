@@ -6,22 +6,34 @@ import com.company.model.Hat;
 import com.company.model.Shirt;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var shirt = new Shirt(
+        List<String> colours = new ArrayList<>();
+        colours.add("Red");
+        colours.add("Green");
+        colours.add("Blue");
+        for (String string : colours) {
+            System.out.println(string);
+        }
+
+        List<ClothingItem> items = new ArrayList<>();
+        items.add(new Shirt(
                 ClothingSize.L,
                 19.99,
-                3);
-        displayItemDetails(shirt);
-
-        var hat = new Hat(
+                3));
+        items.add(new Hat(
                 ClothingSize.M,
                 29.99,
-                1);
-        displayItemDetails(hat);
+                1));
+        
+        for (ClothingItem clothingItem : items) {
+            displayItemDetails(clothingItem);
+        }
     }
 
     private static void displayItemDetails(ClothingItem item) {
